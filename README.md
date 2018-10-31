@@ -1,29 +1,48 @@
+# DevChallenge2018 - TEMET
+
+Basicamente um projeto para criar uma api que efetue cadastro de guerreiros e que possa criar, alterar e apagar do banco de guerreiros.
+
+### Tecnologias Usadas
+
+- JavaScript (Node.Js)
+- MongoDB
+- Express.Js
+
+### Instalação
+
+Para instalar e rodar esse projeto, siga os seguintes passos abaixo:
+
+```sh
+$ git clone https://github.com/lamecksilva/devchallenge2018.git
+$ cd devchallenge2018/
+$ npm install
+$ npm start
+```
+
+### Funcionamento
+
+Basicamente os guerreiros ficam armazenados em um banco de dados na cloud (MongoDB - Mlab), e o usuário pode visualizar todos guerreiros em formato json, pode cadastrar um novo guerreiro, alterar ou apagar o mesmo.
+
+#### Rotas:
+
+- GET `http://localhost:5000/warriors` - Devolve todos os guerreiros do banco de dados em formato JSON.
+- POST `http://localhost:5000/warriors/post` - Cadastro de um novo guerreiro, inserindo os dados no seguinte formato:
+
+```
+Exemplo:
+{
+  "nome": "Joãozinho",
+  "idade": 23,
+  "habilidades": ["Super Hapetite","Força Extrema","Alto Salto"],
+
+  // Força, Resistência, Agilidade e Destreza, respectivamente
+  "atributos": [5,3,3,2]
+}
+```
+
+- POST `http://localhost:5000/warriors/:id` - Atualizar dados de um guerreiro passando seu id (gerado pelo mongoDB) na URL e colocando os novos dados como no exemplo acima.
+
+- DELETE `http://localhost:5000/warriors/:id` - Apagar um guerreiro utilizando seu id.
 
 
-Olá Dev! Bem vindo ao desafio da TEMET para vaga de Desenvolvedor Web!.
-  Estamos muito curiosos de saber como você codifica!! Que tal mostrar suas habilidades ao mundo?
-  
-REGRAS GERAIS
-
-  Faça a cópia do repositório (fork), desenvolva e submeta uma solicitação de mudança (pull request) no branch master.
-  Em caso de dúvidas basta abrir uma issue com sua pergunta (aqui mesmo no github) que nossa equipe irá respondê-lo assim que  possível.
-
-LINGUÁGENS
-  
-  Javascript , Python ou PHP(usando Laravel).
-  
-NOSSO DESAFIO
-  Desenvolva uma API onde o usuario cadastre guerreiros e tenha acesso a essas informações.
-  
-OBRIGATÓRIO:
-   #POST REQUEST na rota warriors/post cadastre nome, idade, habilidades e atributos de seu guerreiro, CRIE MAIS DE 1 GUERREIRO PARA ESTE DESAFIO.
-   #GET REQUEST na rota warriors retorna todos os guerreiros cadastrados.
-   #Desenvolva uma forma de apagar ou atualizar os guerreiros caso seja necessário.
-   #adicione um READ.MD Explicando o funcionamento.
-   
-DIFERENCIAL:
-   #Crie uma pagina falando um pouco sobre você.
-   #Crie uma pagina para fazer as ações nessa api.
-   #Use os protocolos HTTP corretamente.
-   
-BOA SORTE
+obs: Irei adicionar uma pagina react para facilitar o uso dessa api em breve, coisa rápida....
