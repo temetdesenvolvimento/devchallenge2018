@@ -1,0 +1,28 @@
+{
+  "name": "devchallenge2018",
+  "version": "1.0.0",
+  "description": "Um repositório para o desafio da temetagil",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lamecksilva/devchallenge2018.git"
+  },
+  "keywords": [
+    "javascript",
+    "node.js"
+  ],
+  "author": "lameck sandro",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lamecksilva/devchallenge2018/issues"
+  },
+  "homepage": "https://github.com/lamecksilva/devchallenge2018#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "mongoose": "^5.3.8",
+    "validator": "^10.8.0"
+  }
+}
