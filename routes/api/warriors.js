@@ -39,6 +39,15 @@ router.post("/warriors/:id", (req, res) => {
     .catch(err => res.status(400).json(err));
 });
 
+// @route   GET warriors/:id
+// @desc    Listando dados de um guerreiro
+// @access  Public
+router.get("/warriors/:id", (req, res) => {
+  Warrior.findById(req.params.id)
+    .then(warrior => res.json(warrior))
+    .catch(err => res.status(400).json(err));
+});
+
 // @route   DELETE warriors/:id
 // @desc    Deletando um guerreiro
 // @access  Public

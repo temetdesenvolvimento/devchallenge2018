@@ -33,16 +33,17 @@ Exemplo:
 {
   "nome": "Joãozinho",
   "idade": 23,
-  "habilidades": ["Super Hapetite","Força Extrema","Alto Salto"],
+  "habilidades": ["Super Apetite","Força Extrema","Alto Salto"],
 
   // Força, Resistência, Agilidade e Destreza, respectivamente
   "atributos": [5,3,3,2]
 }
 ```
 
+- GET `http://localhost:5000/warriors/:id` - Devolver dados de um guerreiro passando seu id via URL
+
 - POST `http://localhost:5000/warriors/:id` - Atualizar dados de um guerreiro passando seu id (gerado pelo mongoDB) na URL e colocando os novos dados como no exemplo acima.
 
 - DELETE `http://localhost:5000/warriors/:id` - Apagar um guerreiro utilizando seu id.
-
 
 obs: Irei adicionar uma pagina react para facilitar o uso dessa api em breve, coisa rápida....
