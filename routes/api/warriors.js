@@ -29,7 +29,7 @@ router.post("/warriors/post", (req, res) => {
 // @desc    Atualizando um guerreiro
 // @access  Public
 router.post("/warriors/:id", (req, res) => {
-  Warrior.findOneAndUpdate(req.params.id, {
+  Warrior.findByIdAndUpdate(req.params.id, {
     nome: req.body.nome,
     idade: req.body.idade,
     habilidades: req.body.habilidades.split(","),
@@ -52,7 +52,7 @@ router.get("/warriors/:id", (req, res) => {
 // @desc    Deletando um guerreiro
 // @access  Public
 router.delete("/warriors/:id", (req, res) => {
-  Warrior.findOneAndRemove(req.params.id)
+  Warrior.findByIdAndRemove(req.params.id)
     .then(res.json({ success: true }))
     .catch(err => res.json(err));
 });
